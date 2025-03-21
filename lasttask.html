@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-base-100">
+    <div class="collapse bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-1" checked="checked" />
+        <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?</div>
+        <div class="collapse-content text-sm"> 1.getElementById("id") → Selects an element by its ID. <br>
+            2. getElementsByClassName("class") → Selects elements by class (returns HTMLCollection). <br>
+            3. getElementsByTagName("tag") → Selects elements by tag (returns HTMLCollection). <br>
+            4. querySelector("selector") → Selects the first matching element using a CSS selector. <br>
+            5. querySelectorAll("selector") → Selects all matching elements (returns NodeList).</div>
+      </div>
+      <div class="collapse bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
+        <div class="collapse-content text-sm">innerHTML allows you to get or set HTML content, including tags and formatting. innerText retrieves only the visible text, ignoring hidden elements and preserving spacing. textContent gets all text inside an element, including hidden text, but without HTML formatting. innerHTML is useful for inserting elements dynamically, while innerText and textContent are safer for extracting plain text. textContent is generally faster since it doesn't parse HTML.</div>
+      </div>
+      <div class="collapse bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title font-semibold">What is event delegation in the DOM?</div>
+        <div class="collapse-content text-sm">Event delegation is a technique in the DOM where a parent element listens for events on its child elements using event bubbling. Instead of adding event listeners to multiple child elements, you attach a single listener to their common ancestor. When an event occurs, it bubbles up to the parent, which then handles it based on the event target. This improves performance and is useful for dynamically added elements.</div>
+      </div>
+      <div class="collapse bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title font-semibold"> What is event bubbling in the DOM?</div>
+        <div class="collapse-content text-sm">Event bubbling is a process in the DOM where an event triggered on a child element propagates up to its parent and ancestors. It starts from the target element and moves up the DOM tree until it reaches the root. This allows parent elements to listen for events occurring on their children. Bubbling can be controlled using event.stopPropagation(), which prevents the event from propagating further. It is commonly used in event delegation to manage multiple elements efficiently.</div>
+      </div>
+      <div class="collapse bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-1" />
+        <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript?</div>
+        <div class="collapse-content text-sm">In JavaScript, you can create, add, and remove elements using DOM methods. To create an element, use document.createElement("tagName"), and you can set its content using innerText or textContent. To add the element to the page, use appendChild() or append() to insert it into a parent container. If you need to remove an element, use removeChild() on its parent or simply call remove() on the element itself. These methods allow dynamic manipulation of the webpage, making it more interactive and responsive.</div>
+      </div>
+</body>
+</html>
